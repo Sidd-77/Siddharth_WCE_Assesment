@@ -2,10 +2,10 @@
 const Footer = () => {
   return (
     <div className="">
-      <div className="text-center bg-blue-300 py-10">
+      <div className="text-center bg-gradient-to-r to-blue-600 from-purple-500 text-white py-10">
         <a
           href="#"
-          className="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900"
+          className="flex items-center justify-center mb-5 text-3xl font-semibold "
         >
           Hand Crafters
         </a>
@@ -14,9 +14,9 @@ const Footer = () => {
           © 2024 Hand Crafters. All Rights Reserved.
         </span>
 
-        <ul className="flex justify-center mt-5 space-x-5">
+        <ul className="flex justify-center size mt-5 space-x-5">
           <li>
-            <a href="#" className="text-gray-900 hover:text-blue-600">
+            <a href="#" className=" text-xl hover:text-blue-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
@@ -32,7 +32,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="text-gray-900 hover:text-pink-600">
+            <a href="#" className="text-xl hover:text-pink-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
@@ -47,7 +47,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="#" className="text-gray-900 hover:text-blue-600">
+            <a href="#" className="text-xl hover:text-blue-400">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"

@@ -30,36 +30,48 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="mb-10">
-      <div className="text-4xl font-bold text-center my-4">Contact Us</div>
-      <form className=" ml-auto mr-auto w-5/6 lg:w-3/6 md:w-4/6 bg-blue-300 p-4 rounded-lg shadow-md ">
-        <p className="mb-2">Name* :</p>
-        <Input
-          className="mb-2"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <p className="mb-2">Email* :</p>
-        <Input
-          className="mb-2"
-          value={email}
-          type="email"
-          isInvalid={isInvalid}
-          color={isInvalid ? "danger" : "success"}
-          errorMessage="Please enter a valid email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <p className="mb-2">Message* :</p>
-        <Textarea
-          className="mb-4"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <Button className="w-full" color="primary" onClick={handleSubmit}>
-          {" "}
-          Submit{" "}
-        </Button>
-      </form>
+    <div id="contact" className="mb-10 ">
+      <div className="text-4xl font-bold my-5 text-center text-transparent bg-clip-text bg-gradient-to-tr to-blue-600 from-purple-500">
+        Contact Us
+      </div>
+      <div className="relative mx-auto w-5/6 md:w-4/6 lg:w-3/6 rounded-2xl bg-gradient-to-tr transform duration-500 from-blue-500 to-purple-500 p-1 hover:shadow-xl">
+        <form className=" bg-white p-7 rounded-xl ">
+          <p className="mb-2">Name* :</p>
+          <Input
+            className="mb-2"
+            value={name}
+            variant="bordered"
+            onChange={(e) => setName(e.target.value)}
+          />
+          <p className="mb-2">Email* :</p>
+          <Input
+            className="mb-2"
+            value={email}
+            type="email"
+            isInvalid={isInvalid}
+            variant="bordered"
+            color={isInvalid ? "danger" : "success"}
+            errorMessage="Please enter a valid email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <p className="mb-2">Message* :</p>
+          <Textarea
+            className="mb-4"
+            value={message}
+            variant="bordered"
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <Button
+            className="w-full"
+            color="primary"
+            variant="solid"
+            onClick={handleSubmit}
+          >
+            {" "}
+            Submit{" "}
+          </Button>
+        </form>
+      </div>
     </div>
   );
 };

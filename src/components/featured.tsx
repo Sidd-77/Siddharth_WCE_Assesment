@@ -1,4 +1,3 @@
-import { Card, CardHeader, Image, CardBody } from "@nextui-org/react";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -11,7 +10,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+    items: 4,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -36,24 +35,19 @@ interface Props {
 
 const FeaturedProducts: React.FC<Props> = ({ products }) => {
   return (
-    <Carousel className="bg-white mb-10" responsive={responsive} infinite={true}>
+    <Carousel className=" mx-10  py-10" responsive={responsive} infinite={true}>
       {products.map((product) => (
-        <Card key={product.id} shadow="none" className="p-2 m-1 transition hover:bg-blue-200 hover:duration-700 hover:ease-in" isHoverable={false}>
-          <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-            <Image
-              alt="Card background"
-              className="object-cover rounded-xl"
-              src={product.image}
-            />
-          </CardHeader>
-
-          <CardBody className="overflow-visible py-2">
-            <h4 className="font-bold text-large">{product.name}</h4>
-            <p className="">
-              {product.description}
-            </p>
-          </CardBody>
-        </Card>
+        <div className="mx-3 rounded overflow-hidden shadow-lg hover:bg-blue-600 hover:text-white hover:ring hover:ring-blue-600 dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
+          <img
+            className="w-full"
+            src={product.image}
+            alt="Sunset in the mountains"
+          />
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">{product.name}</div>
+            <p className="  ">{product.description}</p>
+          </div>
+        </div>
       ))}
     </Carousel>
   );

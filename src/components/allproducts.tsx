@@ -1,4 +1,3 @@
-import { Card, CardHeader, Image, CardBody } from "@nextui-org/react";
 import React from "react";
 
 export type ProductType = {
@@ -16,20 +15,17 @@ const AllProducts: React.FC<Props> = ({ products }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-4">
       {products.map((product) => (
-        <Card key={product.id} shadow="lg" className="p-2 " isHoverable={true}>
-          <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-            <Image
-              alt="Card background"
-              className="object-cover rounded-xl"
-              src={product.image}
-            />
-          </CardHeader>
-
-          <CardBody className="overflow-visible py-2">
-            <h4 className="font-bold text-large">{product.name}</h4>
-            <p className=" ">{product.description}</p>
-          </CardBody>
-        </Card>
+        <div className="m-3 rounded overflow-hidden shadow-lg hover:bg-blue-600 hover:text-white hover:ring hover:ring-blue-600 dark:hover:ring-white transform duration-500 hover:scale-100 hover:shadow-xl">
+          <img
+            className="w-full"
+            src={product.image}
+            alt="Sunset in the mountains"
+          />
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">{product.name}</div>
+            <p className="  ">{product.description}</p>
+          </div>
+        </div>
       ))}
     </div>
   );
