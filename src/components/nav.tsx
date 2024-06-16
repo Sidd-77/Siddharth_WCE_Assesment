@@ -55,7 +55,7 @@ export default function Nav() {
           <Link
             color="foreground"
             className=" font-semibold hover:text-blue-700 text-2xl"
-            href="/#contact"
+            href="/contact"
           >
             Contacts
           </Link>
@@ -85,7 +85,7 @@ export default function Nav() {
         </NavbarMenuItem>
         <NavbarMenuItem>
           <Link
-            href="/#contact"
+            href="/contact"
             className="w-full mb-3"
             color="foreground"
             size="lg"

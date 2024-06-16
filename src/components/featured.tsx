@@ -45,7 +45,7 @@ const FeaturedProducts: React.FC<Props> = ({ products }) => {
           />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{product.name}</div>
-            <p className="  ">{product.description}</p>
+            <p className="">{product.description}</p>
           </div>
         </div>
       ))}

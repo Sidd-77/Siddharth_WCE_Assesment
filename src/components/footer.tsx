@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <div className="">
+    <div className="relative -mt-100">
       <div className="text-center bg-gradient-to-r to-blue-600 from-purple-500 text-white py-10">
         <a
           href="#"

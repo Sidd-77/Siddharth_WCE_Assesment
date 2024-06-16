@@ -62,7 +62,12 @@ const Contact = () => {
             variant="bordered"
             onChange={(e) => setMessage(e.target.value)}
           />
-          <Button
+
+        <button onClick={handleSubmit} className=" text-large border-large w-full border-blue-600 text-blue-600 rounded-xl font-bold py-2 px-4 hover:text-white hover:bg-blue-600 transform duration-500">
+            Submit
+        </button>
+
+          {/* <Button
             className="w-full"
             color="primary"
             variant="solid"
@@ -70,7 +75,7 @@ const Contact = () => {
           >
             {" "}
             Submit{" "}
-          </Button>
+          </Button> */}
         </form>
       </div>
     </div>
